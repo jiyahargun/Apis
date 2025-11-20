@@ -1,0 +1,10 @@
+echo "<h2>jiya API</h2>";
+echo "<ul>";
+echo "<li><a href='jiya/connect.php'>Connection</a></li>";
+echo "<li><a href='jiya/signup.php'>Connection</a></li>";
+echo "<li><a href='jiya/signin.php'>Connection</a></li>";
+echo "<li><a href='jiya/insert.php'>Connection</a></li>";
+echo "<li><a href='jiya/view.php'>Connection</a></li>";
+echo "<li><a href='jiya/update.php'>Connection</a></li>";
+echo "<li><a href='jiya/delete.php'>Connection</a></li>";
+echo "</ul>";
