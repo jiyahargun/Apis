@@ -8,7 +8,7 @@ $upload_path = 'images/';
 
 
 //creating the upload url
-$upload_url = 'https://' . $_SERVER['SERVER_NAME'] . "/API/" . $upload_path;
+$upload_url = 'https://' . $_SERVER['SERVER_NAME'] . "/jiya/" . $upload_path;
 
 //getting name from the request
 $p_name  = $_REQUEST['p_name'];
