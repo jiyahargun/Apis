@@ -31,7 +31,7 @@ $file_url = $upload_url . $random . '.' . $extension;
 $file_path = $upload_path . $random . '.' . $extension;
 
 //saving the file
-move_uploaded_file($_FILES["p_img"]["p_name"], $file_path);
+move_uploaded_file($_FILES["p_img"]["tmp_name"], $file_path);
 
 //SQL INSERT (FIXED: jiya_products)
 $sql = "INSERT INTO jiya_products(p_name, p_price, p_des, p_img) 
