@@ -1,0 +1,27 @@
+<?php
+include('connect.php');
+
+$city_id = $_POST['city_id'] ?? '';
+$hotel_name = $_POST['hotel_name'] ?? '';
+$address = $_POST['address'] ?? '';
+$description = $_POST['description'] ?? '';
+$rating = $_POST['rating'] ?? '';
+
+if($city_id == "" || $hotel_name == "" || $address == "" || $description == "" || $rating == ""){
+    echo json_encode(["message"=>"All fields required"]);
+    exit;
+}
+
+$sql = "UPDATE hotels SET 
+        hotel_name='$hotel_name',
+        address='$address',
+        description='$description',
+        rating='$rating'
+        WHERE city_id='$city_id'";
+
+if(mysqli_query($con,$sql)){
+    echo json_encode(["message"=>"Hotel Updated successfully"]);
+}else{
+    echo json_encode(["message"=>"Failed to update hotel"]);
+}
+?>

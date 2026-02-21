@@ -1,0 +1,104 @@
+
+echo "<h2>Jiya Project API</h2>";
+echo "<ul>";
+
+echo "<li><a href='jiya_project/admin_registration.php'>admin Registration</a></li>";
+echo "<li><a href='jiya_project/admin_login.php'>admin Login</a></li>";
+echo "<li><a href='jiya_project/admin_logout.php'>admin Logout</a></li>";
+
+echo "<li><a href='jiya_project/user_registration.php'>User Registration </a></li>";
+echo "<li><a href='jiya_project/user_login.php'>User Login </a></li>";
+echo "<li><a href='jiya_project/user_logout.php'>User Logout </a></li>";
+
+echo "<li><a href='jiya_project/insert_city.php'>insert city </a></li>";
+echo "<li><a href='jiya_project/view_city.php'>view city</a></li>";
+echo "<li><a href='jiya_project/update_city.php'>Update city </a></li>";
+echo "<li><a href='jiya_project/delete_city.php'>Delete city </a></li>";
+
+echo "<li><a href='jiya_project/insert_hotels.php'>insert hotels</a></li>";
+echo "<li><a href='jiya_project/view_hotels.php'>view hotels </a></li>";
+echo "<li><a href='jiya_project/update_hotels.php'>Update hotels</a></li>";
+echo "<li><a href='jiya_project/delete_hotels.php'>Delete hotels </a></li>";
+echo "<li><a href='jiya_project/toggle_hotels_status.php'>toggle hotels status</a></li>";
+
+echo "<li><a href='jiya_project/insert_hotel_images.php'> insert hotel images </a></li>";
+echo "<li><a href='jiya_project/view_hotel_images.php'>view hotel images </a></li>";
+echo "<li><a href='jiya_project/delete_hotel_images.php'>delete hotel images </a></li>";
+
+echo "<li><a href='jiya_project/insert_room_categories.php'>insert room categories</a></li>";
+echo "<li><a href='jiya_project/view_room_categories.php'>view room categories </a></li>";
+echo "<li><a href='jiya_project/update_room_categories.php'>Update room categories</a></li>";
+echo "<li><a href='jiya_project/delete_room_categories.php'>Delete room categories </a></li>";
+echo "<li><a href='jiya_project/toggle_room_status.php'>toggle room status</a></li>";
+
+echo "<li><a href='jiya_project/insert_rooms.php'>insert rooms </a></li>";
+echo "<li><a href='jiya_project/view_rooms.php'>view rooms</a></li>";
+echo "<li><a href='jiya_project/update_rooms.php'>Update rooms </a></li>";
+echo "<li><a href='jiya_project/delete_rooms.php'>Delete rooms </a></li>";
+
+echo "<li><a href='jiya_project/insert_rooms_images.php'> insert room images </a></li>";
+echo "<li><a href='jiya_project/view_rooms_images.php'>view room images </a></li>";
+echo "<li><a href='jiya_project/delete_room_images.php'>delete room images </a></li>";
+
+echo "<li><a href='jiya_project/insert_service.php'>insert service </a></li>";
+echo "<li><a href='jiya_project/view_service.php'>view service</a></li>";
+echo "<li><a href='jiya_project/update_service.php'>Update service</a></li>";
+echo "<li><a href='jiya_project/delete_service.php'>Delete service</a></li>";
+
+echo "<li><a href='jiya_project/insert_hotel_service.php'>insert hotel service </a></li>";
+echo "<li><a href='jiya_project/view_hotel_service.php'>view hotel service</a></li>";
+echo "<li><a href='jiya_project/update_hotel_service.php'>Update hotel service</a></li>";
+echo "<li><a href='jiya_project/delete_hotel_service.php'>Delete hotel service</a></li>";
+
+echo "<li><a href='jiya_project/insert_room_service.php'>insert room service </a></li>";
+echo "<li><a href='jiya_project/view_room_service.php'>view room service</a></li>";
+echo "<li><a href='jiya_project/update_room_service.php'>Update room service</a></li>";
+echo "<li><a href='jiya_project/delete_room_service.php'>Delete room service</a></li>";
+
+echo "<li><a href='jiya_project/insert_offers.php'>insert offers </a></li>";
+echo "<li><a href='jiya_project/view_offers.php'>view offers</a></li>";
+echo "<li><a href='jiya_project/update_offers.php'>Update offers</a></li>";
+echo "<li><a href='jiya_project/delete_offers.php'>Delete offers</a></li>";
+
+echo "<li><a href='jiya_project/insert_offer_images.php'> insert offers images </a></li>";
+echo "<li><a href='jiya_project/view_offers_images.php'>view offers images </a></li>";
+echo "<li><a href='jiya_project/delete_offer_images.php'>delete offers images </a></li>";
+echo "<li><a href='jiya_project/toggle_offer_status.php'>toggle offers status </a></li>";
+
+echo "<li><a href='jiya_project/insert_review.php'> insert Review</a></li>";
+echo "<li><a href='jiya_project/view_review.php'>view Review</a></li>";
+echo "<li><a href='jiya_project/delete_review.php'>delete Review</a></li>";
+
+echo "<li><a href='jiya_project/insert_favourite.php'> insert favourite</a></li>";
+echo "<li><a href='jiya_project/view_favourtie.php'>view favourite</a></li>";
+echo "<li><a href='jiya_project/delete_favourite.php'>delete favourite</a></li>";
+
+echo "<li><a href='jiya_project/view_available_offers.php'>view all available offers</a></li>";
+
+echo "<li><a href='jiya_project/users_view_hotels.php'>user view hotels</a></li>";
+echo "<li><a href='jiya_project/user_view_hotel_detail.php'>users view hotel detail</a></li>";
+echo "<li><a href='jiya_project/user_view_room_category.php'>user view room category</a></li>";
+echo "<li><a href='jiya_project/user_view_rooms_details.php'>users view rooms details</a></li>";
+
+echo "<li><a href='jiya_project/create_booking.php'>create booking</a></li>";
+echo "<li><a href='jiya_project/view_my_booking.php'>view my booking</a></li>";
+echo "<li><a href='jiya_project/cancle_booking.php'>cancle booking</a></li>";
+
+echo "<li><a href='jiya_project/view_all_booking.php'>Admin view all bookings</a></li>";
+echo "<li><a href='jiya_project/admin_update_booking_status.php'>Admin update booking status</a></li>";
+
+echo "<li><a href='jiya_project/view_booking_history.php'>Admin view bookings histroy</a></li>";
+echo "<li><a href='jiya_project/view_all_booking_histroy.php'>Admin view all booking histroy</a></li>";
+
+echo "<li><a href='jiya_project/make_payment.php'>user make payment</a></li>";
+echo "<li><a href='jiya_project/view_my_payment.php'>user view payment</a></li>";
+echo "<li><a href='jiya_project/view_user_payment.php'>user view payment extra</a></li>";
+
+echo "<li><a href='jiya_project/admin_view_payments.php'>admin view payment</a></li>";
+echo "<li><a href='jiya_project/admin_update_payment.php'>admin update payment</a></li>";
+echo "<li><a href='jiya_project/view_dashboard_status.php'> view dashboard status</a></li>";
+echo "<li><a href='jiya_project/view_recent_booking.php'> view recent booking</a></li>";
+
+
+
+echo "</ul>";
