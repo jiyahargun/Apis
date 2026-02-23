@@ -84,6 +84,8 @@ echo "<li><a href='jiya_project/create_booking.php'>create booking</a></li>";
 echo "<li><a href='jiya_project/view_my_booking.php'>view my booking</a></li>";
 echo "<li><a href='jiya_project/cancle_booking.php'>cancle booking</a></li>";
 echo "<li><a href='jiya_project/check_room_availability.php'> check room availability</a></li>";
+echo "<li><a href='jiya_project/view_booking_details.php'> view booking details</a></li>";
+
 
 
 echo "<li><a href='jiya_project/view_all_booking.php'>Admin view all bookings</a></li>";
