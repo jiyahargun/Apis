@@ -103,6 +103,7 @@ echo "<li><a href='jiya_project/admin_update_payment.php'>admin update payment</
 echo "<li><a href='jiya_project/view_dashboard_status.php'> view dashboard status</a></li>";
 echo "<li><a href='jiya_project/view_recent_booking.php'> view recent booking</a></li>";
 
+echo "<li><a href='jiya_project/view_all_users.php'> view all users</a></li>";
 
 
 echo "</ul>";
