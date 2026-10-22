@@ -1,0 +1,2478 @@
+<?php
+// index.php
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        PrakrutiVerse | Explore • Learn • Build • Share • Grow
+    </title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: #f8fafc;
+
+            color: #334155;
+
+            line-height: 1.6;
+
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        :root {
+
+            --primary: #2563eb;
+
+            --primary-dark: #1d4ed8;
+
+            --secondary: #0f172a;
+
+            --cyan: #06b6d4;
+
+            --green: #10b981;
+
+            --white: #ffffff;
+
+            --muted: #64748b;
+
+            --border: #e2e8f0;
+
+            --light-blue: #eff6ff;
+
+            --light-cyan: #ecfeff;
+
+            --light-green: #ecfdf5;
+
+        }
+
+
+        /* =========================================
+           CONTAINER
+        ========================================= */
+
+        .container {
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            padding: 0 20px;
+
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        header {
+
+            background: #0f172a;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,0.08);
+
+        }
+
+
+        .navbar {
+
+            min-height: 72px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+
+        /* =========================================
+           LOGO
+        ========================================= */
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 11px;
+
+            color: white;
+
+        }
+
+
+        .logo-icon {
+
+            width: 43px;
+
+            height: 43px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #06b6d4
+                );
+
+            border-radius: 12px;
+
+            font-weight: bold;
+
+            font-size: 13px;
+
+            flex-shrink: 0;
+
+            box-shadow:
+                0 5px 18px
+                rgba(37,99,235,0.25);
+
+        }
+
+
+        .logo-text {
+
+            display: flex;
+
+            flex-direction: column;
+
+        }
+
+
+        .logo-name {
+
+            font-size: 20px;
+
+            font-weight: 800;
+
+            line-height: 1.2;
+
+        }
+
+
+        .logo-name span {
+
+            color: #38bdf8;
+
+        }
+
+
+        .logo-tagline {
+
+            color: #94a3b8;
+
+            font-size: 8px;
+
+            letter-spacing: 0.7px;
+
+            margin-top: 3px;
+
+            white-space: nowrap;
+
+        }
+
+
+        /* =========================================
+           NAVIGATION
+        ========================================= */
+
+        nav {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 28px;
+
+        }
+
+
+        nav a {
+
+            color: #cbd5e1;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            transition: 0.25s;
+
+        }
+
+
+        nav a:hover {
+
+            color: #ffffff;
+
+        }
+
+
+        .nav-api {
+
+            background: #2563eb;
+
+            color: white !important;
+
+            padding:
+                9px 15px;
+
+            border-radius: 8px;
+
+        }
+
+
+        .nav-api:hover {
+
+            background: #1d4ed8;
+
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+
+            background:
+
+                radial-gradient(
+                    circle at 10% 20%,
+                    rgba(37,99,235,0.32),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 90% 15%,
+                    rgba(6,182,212,0.24),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 50% 100%,
+                    rgba(16,185,129,0.12),
+                    transparent 35%
+                ),
+
+                #0f172a;
+
+            color: white;
+
+            padding:
+                90px 0 85px;
+
+        }
+
+
+        .hero-content {
+
+            text-align: center;
+
+            max-width: 800px;
+
+            margin: auto;
+
+        }
+
+
+        .hero-label {
+
+            display: inline-block;
+
+            color: #67e8f9;
+
+            background:
+                rgba(6,182,212,0.08);
+
+            border:
+                1px solid
+                rgba(103,232,249,0.18);
+
+            padding:
+                6px 13px;
+
+            border-radius: 30px;
+
+            font-size: 11px;
+
+            font-weight: bold;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .hero h1 {
+
+            font-size: 50px;
+
+            line-height: 1.15;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .hero h1 span {
+
+            color: #38bdf8;
+
+        }
+
+
+        .hero p {
+
+            color: #cbd5e1;
+
+            font-size: 16px;
+
+            max-width: 680px;
+
+            margin:
+                0 auto 25px;
+
+        }
+
+
+        .hero-motto {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            color: #e2e8f0;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+        }
+
+
+        .motto-item {
+
+            padding:
+                6px 10px;
+
+            background:
+                rgba(255,255,255,0.05);
+
+            border-radius: 7px;
+
+        }
+
+
+        /* =========================================
+           COMMON SECTION
+        ========================================= */
+
+        section {
+
+            scroll-margin-top: 90px;
+
+        }
+
+
+        .section {
+
+            padding:
+                70px 0;
+
+        }
+
+
+        .section-title {
+
+            text-align: center;
+
+            margin-bottom: 38px;
+
+        }
+
+
+        .section-title h2 {
+
+            color: var(--secondary);
+
+            font-size: 31px;
+
+            margin-bottom: 8px;
+
+        }
+
+
+        .section-title p {
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+        }
+
+
+        /* =========================================
+           ABOUT
+        ========================================= */
+
+        .about {
+
+            background: white;
+
+        }
+
+
+        .about-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1.2fr
+                0.8fr;
+
+            gap: 30px;
+
+            align-items: stretch;
+
+        }
+
+
+        .about-card {
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 16px;
+
+            padding: 30px;
+
+            background: #ffffff;
+
+            box-shadow:
+                0 8px 25px
+                rgba(15,23,42,0.04);
+
+        }
+
+
+        .about-card h3 {
+
+            color: var(--secondary);
+
+            font-size: 21px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .about-card p {
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .about-highlight {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eff6ff,
+                    #ecfeff
+                );
+
+            border:
+                1px solid
+                #dbeafe;
+
+        }
+
+
+        .about-highlight h3 {
+
+            color: #1e3a8a;
+
+        }
+
+
+        .about-points {
+
+            display: grid;
+
+            gap: 10px;
+
+            margin-top: 18px;
+
+        }
+
+
+        .about-point {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            color: #334155;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+        }
+
+
+        /* =========================================
+           TECHNOLOGIES
+        ========================================= */
+
+        .technology-section {
+
+            background: #f8fafc;
+
+        }
+
+
+        .technology-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .technology-card {
+
+            background: white;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 15px;
+
+            padding: 25px;
+
+            transition: 0.25s;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .technology-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            top: 0;
+
+            width: 100%;
+
+            height: 3px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #2563eb,
+                    #06b6d4
+                );
+
+        }
+
+
+        .technology-card:hover {
+
+            transform:
+                translateY(-4px);
+
+            border-color: #bfdbfe;
+
+            box-shadow:
+                0 12px 30px
+                rgba(15,23,42,0.08);
+
+        }
+
+
+        .tech-icon {
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 12px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: var(--light-blue);
+
+            font-size: 23px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .technology-card h3 {
+
+            color: var(--secondary);
+
+            font-size: 18px;
+
+            margin-bottom: 7px;
+
+        }
+
+
+        .technology-card p {
+
+            color: var(--muted);
+
+            font-size: 13px;
+
+        }
+
+
+        /* =========================================
+           API SECTION
+        ========================================= */
+
+        .api-section {
+
+            background: white;
+
+        }
+
+
+        .api-intro {
+
+            max-width: 750px;
+
+            margin:
+                -15px auto 35px;
+
+            text-align: center;
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+        }
+
+
+        .api-table-card {
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 16px;
+
+            overflow: hidden;
+
+            margin-bottom: 30px;
+
+            background: white;
+
+            box-shadow:
+                0 8px 25px
+                rgba(15,23,42,0.04);
+
+        }
+
+
+        .api-table-title {
+
+            padding:
+                20px 24px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0f172a,
+                    #1e3a8a
+                );
+
+            color: white;
+
+        }
+
+
+        .api-table-title h3 {
+
+            font-size: 20px;
+
+            margin-bottom: 3px;
+
+        }
+
+
+        .api-table-title p {
+
+            color: #cbd5e1;
+
+            font-size: 12px;
+
+        }
+
+
+        .table-wrapper {
+
+            width: 100%;
+
+            overflow-x: auto;
+
+        }
+
+
+        .api-table {
+
+            width: 100%;
+
+            border-collapse: collapse;
+
+            min-width: 650px;
+
+        }
+
+
+        .api-table th {
+
+            background: #f1f5f9;
+
+            color: #334155;
+
+            font-size: 12px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.5px;
+
+            padding:
+                13px 16px;
+
+            text-align: left;
+
+            border-bottom:
+                1px solid
+                var(--border);
+
+        }
+
+
+        .api-table td {
+
+            padding:
+                13px 16px;
+
+            border-bottom:
+                1px solid
+                #f1f5f9;
+
+            font-size: 13px;
+
+            color: #475569;
+
+        }
+
+
+        .api-table tr:last-child td {
+
+            border-bottom: none;
+
+        }
+
+
+        .api-table tr:hover td {
+
+            background: #f8fafc;
+
+        }
+
+
+        .method {
+
+            display: inline-block;
+
+            min-width: 62px;
+
+            text-align: center;
+
+            padding:
+                4px 8px;
+
+            border-radius: 5px;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+        }
+
+
+        .get {
+
+            background: #dcfce7;
+
+            color: #166534;
+
+        }
+
+
+        .post {
+
+            background: #dbeafe;
+
+            color: #1d4ed8;
+
+        }
+
+
+        .api-file {
+
+            font-family:
+                Consolas,
+                monospace;
+
+            color: #2563eb;
+
+            font-weight: 600;
+
+        }
+
+
+        .api-open {
+
+            display: inline-block;
+
+            padding:
+                6px 11px;
+
+            background: #eff6ff;
+
+            color: #2563eb;
+
+            border:
+                1px solid
+                #dbeafe;
+
+            border-radius: 6px;
+
+            font-size: 11px;
+
+            font-weight: bold;
+
+        }
+
+
+        .api-open:hover {
+
+            background: #2563eb;
+
+            color: white;
+
+        }
+
+
+        /* =========================================
+           GROW SECTION
+        ========================================= */
+
+        .grow-section {
+
+            padding:
+                55px 0;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eff6ff,
+                    #ecfeff,
+                    #ecfdf5
+                );
+
+            border-top:
+                1px solid
+                #e2e8f0;
+
+            border-bottom:
+                1px solid
+                #e2e8f0;
+
+        }
+
+
+        .grow-content {
+
+            text-align: center;
+
+            max-width: 750px;
+
+            margin: auto;
+
+        }
+
+
+        .grow-content h2 {
+
+            color: var(--secondary);
+
+            font-size: 28px;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .grow-content p {
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .grow-items {
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+        }
+
+
+        .grow-item {
+
+            background: white;
+
+            border:
+                1px solid
+                #dbeafe;
+
+            padding:
+                8px 14px;
+
+            border-radius: 30px;
+
+            color: #334155;
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+
+            background: #020617;
+
+            color: #94a3b8;
+
+            padding:
+                35px 0 20px;
+
+        }
+
+
+        .footer-main {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 25px;
+
+        }
+
+
+        .footer-brand {
+
+            color: white;
+
+            font-size: 19px;
+
+            font-weight: 800;
+
+        }
+
+
+        .footer-brand span {
+
+            color: #38bdf8;
+
+        }
+
+
+        .footer-basic {
+
+            color: #64748b;
+
+            font-size: 11px;
+
+            margin-top: 5px;
+
+        }
+
+
+        .footer-contact {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+        }
+
+
+        .contact-item {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            color: #cbd5e1;
+
+            font-size: 13px;
+
+            padding:
+                8px 12px;
+
+            background:
+                rgba(255,255,255,0.04);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.07);
+
+            border-radius: 7px;
+
+        }
+
+
+        .contact-item:hover {
+
+            color: white;
+
+            border-color:
+                rgba(56,189,248,0.3);
+
+        }
+
+
+        .copyright {
+
+            border-top:
+                1px solid
+                #1e293b;
+
+            margin-top: 25px;
+
+            padding-top: 18px;
+
+            text-align: center;
+
+            font-size: 11px;
+
+            color: #64748b;
+
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media(max-width: 850px) {
+
+            .about-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .technology-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 42px;
+
+            }
+
+        }
+
+
+        @media(max-width: 650px) {
+
+            .navbar {
+
+                min-height: 65px;
+
+            }
+
+
+            nav {
+
+                gap: 12px;
+
+            }
+
+
+            nav a {
+
+                font-size: 12px;
+
+            }
+
+
+            .hero {
+
+                padding:
+                    65px 0;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 36px;
+
+            }
+
+
+            .hero p {
+
+                font-size: 14px;
+
+            }
+
+
+            .technology-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .footer-main {
+
+                flex-direction: column;
+
+                text-align: center;
+
+            }
+
+
+            .footer-contact {
+
+                justify-content: center;
+
+            }
+
+        }
+
+
+        @media(max-width: 480px) {
+
+            .container {
+
+                padding:
+                    0 15px;
+
+            }
+
+
+            .logo-icon {
+
+                width: 38px;
+
+                height: 38px;
+
+                font-size: 11px;
+
+            }
+
+
+            .logo-name {
+
+                font-size: 17px;
+
+            }
+
+
+            .logo-tagline {
+
+                font-size: 6.5px;
+
+                letter-spacing: 0;
+
+            }
+
+
+            nav {
+
+                gap: 8px;
+
+            }
+
+
+            nav a {
+
+                font-size: 11px;
+
+            }
+
+
+            .nav-api {
+
+                padding:
+                    7px 9px;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 32px;
+
+            }
+
+
+            .section {
+
+                padding:
+                    55px 0;
+
+            }
+
+
+            .section-title h2 {
+
+                font-size: 27px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <div class="container">
+
+        <div class="navbar">
+
+
+            <a
+                href="#home"
+                class="logo"
+            >
+
+                <div class="logo-icon">
+                    PV
+                </div>
+
+
+                <div class="logo-text">
+
+                    <div class="logo-name">
+                        Prakruti<span>Verse</span>
+                    </div>
+
+                    <div class="logo-tagline">
+                        EXPLORE · LEARN · BUILD · SHARE · GROW
+                    </div>
+
+                </div>
+
+            </a>
+
+
+            <nav>
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a
+                    href="#free-api"
+                    class="nav-api"
+                >
+                    🔗 Free API
+                </a>
+
+            </nav>
+
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section
+    class="hero"
+    id="home"
+>
+
+    <div class="container">
+
+        <div class="hero-content">
+
+
+            <div class="hero-label">
+                Welcome to PrakrutiVerse
+            </div>
+
+
+            <h1>
+
+                Explore.
+                <span>Learn.</span>
+                Build.
+                Share.
+                Grow.
+
+            </h1>
+
+
+            <p>
+
+                A simple technology space to explore
+                knowledge, learn new skills, build projects,
+                share ideas and grow together. 🚀
+
+            </p>
+
+
+            <div class="hero-motto">
+
+                <div class="motto-item">
+                    🌍 Explore
+                </div>
+
+                <div class="motto-item">
+                    📚 Learn
+                </div>
+
+                <div class="motto-item">
+                    🛠️ Build
+                </div>
+
+                <div class="motto-item">
+                    🤝 Share
+                </div>
+
+                <div class="motto-item">
+                    🌱 Grow
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section
+    class="section about"
+    id="about"
+>
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <h2>
+                About PrakrutiVerse
+            </h2>
+
+            <p>
+                Learn, create and explore technology in one place.
+            </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+
+            <div class="about-card">
+
+                <h3>
+                    💡 Learn. Build. Share.
+                </h3>
+
+
+                <p>
+
+                    PrakrutiVerse is a technology-focused platform
+                    created to make learning and project development
+                    simple, practical and accessible.
+
+                </p>
+
+
+                <p>
+
+                    Explore different technologies, understand
+                    practical concepts, create projects and share
+                    useful knowledge with others.
+
+                </p>
+
+
+                <div class="about-points">
+
+                    <div class="about-point">
+                        🔎 Explore new technologies
+                    </div>
+
+                    <div class="about-point">
+                        📖 Learn practical concepts
+                    </div>
+
+                    <div class="about-point">
+                        💻 Build real projects
+                    </div>
+
+                    <div class="about-point">
+                        🤝 Share knowledge and ideas
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="about-card about-highlight">
+
+                <h3>
+                    🚀 Our Focus
+                </h3>
+
+
+                <p>
+
+                    Technology learning, development,
+                    testing, networking and security.
+
+                </p>
+
+
+                <div class="about-points">
+
+                    <div class="about-point">
+                        📱 Mobile Development
+                    </div>
+
+                    <div class="about-point">
+                        ☕ Java Development
+                    </div>
+
+                    <div class="about-point">
+                        🌐 Networking
+                    </div>
+
+                    <div class="about-point">
+                        🔐 Cyber Security
+                    </div>
+
+                    <div class="about-point">
+                        🤖 Automation Testing
+                    </div>
+
+                    <div class="about-point">
+                        ✅ Manual Testing / QA
+                    </div>
+                    <div class="about-point">
+                        ✅ C
+                    </div>
+
+                    <div class="about-point">
+                        ✅ C++
+                    </div>
+                    <div class="about-point">
+                        ✅ Database
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TECHNOLOGIES
+===================================================== -->
+
+<section
+    class="section technology-section"
+    id="technologies"
+>
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <h2>
+                Explore Technologies
+            </h2>
+
+            <p>
+                Explore different areas of technology and development.
+            </p>
+
+        </div>
+
+
+        <div class="technology-grid">
+
+
+            <div class="technology-card">
+
+                <div class="tech-icon">
+                    📱
+                </div>
+
+                <h3>
+                    Mobile App Development
+                </h3>
+
+                <p>
+                    Explore mobile application development,
+                    app architecture, UI and practical projects.
+                </p>
+
+            </div>
+
+
+            <div class="technology-card">
+
+                <div class="tech-icon">
+                    ☕
+                </div>
+
+                <h3>
+                    Java Development
+                </h3>
+
+                <p>
+                    Learn Java programming, OOP concepts,
+                    application development and project building.
+                </p>
+
+            </div>
+
+
+            <div class="technology-card">
+
+                <div class="tech-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    Networking
+                </h3>
+
+                <p>
+                    Understand networking concepts, protocols,
+                    systems and practical network fundamentals.
+                </p>
+
+            </div>
+
+
+            <div class="technology-card">
+
+                <div class="tech-icon">
+                    🔐
+                </div>
+
+                <h3>
+                    Cyber Security
+                </h3>
+
+                <p>
+                    Explore security concepts, secure systems,
+                    awareness and defensive security practices.
+                </p>
+
+            </div>
+
+
+            <div class="technology-card">
+
+                <div class="tech-icon">
+                    🤖
+                </div>
+
+                <h3>
+                    Automation Testing
+                </h3>
+
+                <p>
+                    Learn automated testing concepts,
+                    test workflows and practical QA automation.
+                </p>
+
+            </div>
+
+
+            <div class="technology-card">
+
+                <div class="tech-icon">
+                    ✅
+                </div>
+
+                <h3>
+                    Manual Testing / QA
+                </h3>
+
+                <p>
+                    Explore software testing, test cases,
+                    bug reporting and quality assurance basics.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FREE API
+===================================================== -->
+
+<section
+    class="section api-section"
+    id="free-api"
+>
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <h2>
+                🔗 Free API
+            </h2>
+
+            <p>
+                Explore the available Jiya Project APIs.
+            </p>
+
+        </div>
+
+
+        <div class="api-intro">
+
+            Select an API from the list below to open its PHP endpoint.
+
+        </div>
+
+
+
+        <!-- =================================================
+             JIYA PROJECT API LIST
+        ================================================== -->
+
+        <div class="api-table-card">
+            <div class="api-table-title">
+                <h3>🏨 Jiya Project API</h3>
+                <p>Hotel booking, admin, user, room, offer, payment and booking APIs</p>
+            </div>
+            <div class="table-wrapper">
+                <table class="api-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>API Name</th>
+                            <th>File</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>Admin Login</td>
+                            <td class="api-file">jiya/admin_login.php</td>
+                            <td><a href="jiya/admin_login.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                            <td>Admin Logout</td>
+                            <td class="api-file">jiya/admin_logout.php</td>
+                            <td><a href="jiya/admin_logout.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                            <td>Admin Registration</td>
+                            <td class="api-file">jiya/admin_registration.php</td>
+                            <td><a href="jiya/admin_registration.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>04</td>
+                            <td>Admin Update Booking</td>
+                            <td class="api-file">jiya/admin_update_booking.php</td>
+                            <td><a href="jiya/admin_update_booking.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>05</td>
+                            <td>Admin Update Booking Status</td>
+                            <td class="api-file">jiya/admin_update_booking_status.php</td>
+                            <td><a href="jiya/admin_update_booking_status.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>06</td>
+                            <td>Admin View Payments</td>
+                            <td class="api-file">jiya/admin_view_payments.php</td>
+                            <td><a href="jiya/admin_view_payments.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>07</td>
+                            <td>Cancel Booking</td>
+                            <td class="api-file">jiya/cancle_booking.php</td>
+                            <td><a href="jiya/cancle_booking.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>08</td>
+                            <td>Check Room Availability</td>
+                            <td class="api-file">jiya/check_room_availability.php</td>
+                            <td><a href="jiya/check_room_availability.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>09</td>
+                            <td>Delete</td>
+                            <td class="api-file">jiya/delete.php</td>
+                            <td><a href="jiya/delete.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Delete City</td>
+                            <td class="api-file">jiya/delete_city.php</td>
+                            <td><a href="jiya/delete_city.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Delete Favourite</td>
+                            <td class="api-file">jiya/delete_favourite.php</td>
+                            <td><a href="jiya/delete_favourite.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Delete Hotel Images</td>
+                            <td class="api-file">jiya/delete_hotel_images.php</td>
+                            <td><a href="jiya/delete_hotel_images.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Delete Hotel Service</td>
+                            <td class="api-file">jiya/delete_hotel_service.php</td>
+                            <td><a href="jiya/delete_hotel_service.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>Delete Hotels</td>
+                            <td class="api-file">jiya/delete_hotels.php</td>
+                            <td><a href="jiya/delete_hotels.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>Delete Offer Images</td>
+                            <td class="api-file">jiya/delete_offer_images.php</td>
+                            <td><a href="jiya/delete_offer_images.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>Delete Offers</td>
+                            <td class="api-file">jiya/delete_offers.php</td>
+                            <td><a href="jiya/delete_offers.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>Delete Review</td>
+                            <td class="api-file">jiya/delete_review.php</td>
+                            <td><a href="jiya/delete_review.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>Delete Room Categories</td>
+                            <td class="api-file">jiya/delete_room_categories.php</td>
+                            <td><a href="jiya/delete_room_categories.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>Delete Room Images</td>
+                            <td class="api-file">jiya/delete_room_images.php</td>
+                            <td><a href="jiya/delete_room_images.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>Delete Room Service</td>
+                            <td class="api-file">jiya/delete_room_service.php</td>
+                            <td><a href="jiya/delete_room_service.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>Delete Rooms</td>
+                            <td class="api-file">jiya/delete_rooms.php</td>
+                            <td><a href="jiya/delete_rooms.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>Delete Service</td>
+                            <td class="api-file">jiya/delete_service.php</td>
+                            <td><a href="jiya/delete_service.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>Insert</td>
+                            <td class="api-file">jiya/insert.php</td>
+                            <td><a href="jiya/insert.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>Insert City</td>
+                            <td class="api-file">jiya/insert_city.php</td>
+                            <td><a href="jiya/insert_city.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Insert Favourite</td>
+                            <td class="api-file">jiya/insert_favourite.php</td>
+                            <td><a href="jiya/insert_favourite.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>Insert Hotel Images</td>
+                            <td class="api-file">jiya/insert_hotel_images.php</td>
+                            <td><a href="jiya/insert_hotel_images.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>Insert Hotel Service</td>
+                            <td class="api-file">jiya/insert_hotel_service.php</td>
+                            <td><a href="jiya/insert_hotel_service.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>Insert Hotels</td>
+                            <td class="api-file">jiya/insert_hotels.php</td>
+                            <td><a href="jiya/insert_hotels.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>Insert Offer Images</td>
+                            <td class="api-file">jiya/insert_offer_images.php</td>
+                            <td><a href="jiya/insert_offer_images.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>Insert Offers</td>
+                            <td class="api-file">jiya/insert_offers.php</td>
+                            <td><a href="jiya/insert_offers.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td>Insert Review</td>
+                            <td class="api-file">jiya/insert_review.php</td>
+                            <td><a href="jiya/insert_review.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td>Insert Room Categories</td>
+                            <td class="api-file">jiya/insert_room_categories.php</td>
+                            <td><a href="jiya/insert_room_categories.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>33</td>
+                            <td>Insert Room Service</td>
+                            <td class="api-file">jiya/insert_room_service.php</td>
+                            <td><a href="jiya/insert_room_service.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td>Insert Rooms</td>
+                            <td class="api-file">jiya/insert_rooms.php</td>
+                            <td><a href="jiya/insert_rooms.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                            <td>Insert Room Images</td>
+                            <td class="api-file">jiya/insert_rooms_images.php</td>
+                            <td><a href="jiya/insert_rooms_images.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>Insert Service</td>
+                            <td class="api-file">jiya/insert_service.php</td>
+                            <td><a href="jiya/insert_service.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td>Make Payment</td>
+                            <td class="api-file">jiya/make_payment.php</td>
+                            <td><a href="jiya/make_payment.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>Toggle Hotel Status</td>
+                            <td class="api-file">jiya/toggle_hotels_status.php</td>
+                            <td><a href="jiya/toggle_hotels_status.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                            <td>Toggle Offer Status</td>
+                            <td class="api-file">jiya/toggle_offer_status.php</td>
+                            <td><a href="jiya/toggle_offer_status.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>Toggle Room Status</td>
+                            <td class="api-file">jiya/toggle_room_status.php</td>
+                            <td><a href="jiya/toggle_room_status.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>41</td>
+                            <td>Update City</td>
+                            <td class="api-file">jiya/update_city.php</td>
+                            <td><a href="jiya/update_city.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>42</td>
+                            <td>Update Hotel Service</td>
+                            <td class="api-file">jiya/update_hotel_service.php</td>
+                            <td><a href="jiya/update_hotel_service.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>43</td>
+                            <td>Update Hotels</td>
+                            <td class="api-file">jiya/update_hotels.php</td>
+                            <td><a href="jiya/update_hotels.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>44</td>
+                            <td>Update Offers</td>
+                            <td class="api-file">jiya/update_offers.php</td>
+                            <td><a href="jiya/update_offers.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>45</td>
+                            <td>Update Room Categories</td>
+                            <td class="api-file">jiya/update_room_categories.php</td>
+                            <td><a href="jiya/update_room_categories.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>46</td>
+                            <td>Update Room Service</td>
+                            <td class="api-file">jiya/update_room_service.php</td>
+                            <td><a href="jiya/update_room_service.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>47</td>
+                            <td>Update Rooms</td>
+                            <td class="api-file">jiya/update_rooms.php</td>
+                            <td><a href="jiya/update_rooms.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>48</td>
+                            <td>Update Service</td>
+                            <td class="api-file">jiya/update_service.php</td>
+                            <td><a href="jiya/update_service.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>49</td>
+                            <td>User Login</td>
+                            <td class="api-file">jiya/user_login.php</td>
+                            <td><a href="jiya/user_login.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                            <td>User Logout</td>
+                            <td class="api-file">jiya/user_logout.php</td>
+                            <td><a href="jiya/user_logout.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>51</td>
+                            <td>User Registration</td>
+                            <td class="api-file">jiya/user_registration.php</td>
+                            <td><a href="jiya/user_registration.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>52</td>
+                            <td>User View Hotel Detail</td>
+                            <td class="api-file">jiya/user_view_hotel_detail.php</td>
+                            <td><a href="jiya/user_view_hotel_detail.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>53</td>
+                            <td>User View Room Category</td>
+                            <td class="api-file">jiya/user_view_room_category.php</td>
+                            <td><a href="jiya/user_view_room_category.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>54</td>
+                            <td>User View Room Details</td>
+                            <td class="api-file">jiya/user_view_rooms_details.php</td>
+                            <td><a href="jiya/user_view_rooms_details.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>55</td>
+                            <td>User View Hotels</td>
+                            <td class="api-file">jiya/user_view_hotels.php</td>
+                            <td><a href="jiya/user_view_hotels.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>56</td>
+                            <td>View All Bookings</td>
+                            <td class="api-file">jiya/view_all_booking.php</td>
+                            <td><a href="jiya/view_all_booking.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>57</td>
+                            <td>View All Booking History</td>
+                            <td class="api-file">jiya/view_all_booking_history.php</td>
+                            <td><a href="jiya/view_all_booking_history.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>58</td>
+                            <td>View All Users</td>
+                            <td class="api-file">jiya/view_all_users.php</td>
+                            <td><a href="jiya/view_all_users.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>59</td>
+                            <td>View Available Offers</td>
+                            <td class="api-file">jiya/view_available_offers.php</td>
+                            <td><a href="jiya/view_available_offers.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>60</td>
+                            <td>View Booking Details</td>
+                            <td class="api-file">jiya/view_booking_details.php</td>
+                            <td><a href="jiya/view_booking_details.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>61</td>
+                            <td>View Booking History</td>
+                            <td class="api-file">jiya/view_booking_histroy.php</td>
+                            <td><a href="jiya/view_booking_histroy.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>62</td>
+                            <td>View City</td>
+                            <td class="api-file">jiya/view_city.php</td>
+                            <td><a href="jiya/view_city.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>63</td>
+                            <td>View Dashboard Status</td>
+                            <td class="api-file">jiya/view_dashboard_status.php</td>
+                            <td><a href="jiya/view_dashboard_status.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>64</td>
+                            <td>View Favourite</td>
+                            <td class="api-file">jiya/view_favourite.php</td>
+                            <td><a href="jiya/view_favourite.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>65</td>
+                            <td>View Hotel Images</td>
+                            <td class="api-file">jiya/view_hotel_images.php</td>
+                            <td><a href="jiya/view_hotel_images.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>66</td>
+                            <td>View Hotel Service</td>
+                            <td class="api-file">jiya/view_hotel_service.php</td>
+                            <td><a href="jiya/view_hotel_service.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>67</td>
+                            <td>View Hotels</td>
+                            <td class="api-file">jiya/view_hotels.php</td>
+                            <td><a href="jiya/view_hotels.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>68</td>
+                            <td>View My Booking</td>
+                            <td class="api-file">jiya/view_my_booking.php</td>
+                            <td><a href="jiya/view_my_booking.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>69</td>
+                            <td>View My Payments</td>
+                            <td class="api-file">jiya/view_my_payment.php</td>
+                            <td><a href="jiya/view_my_payment.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>70</td>
+                            <td>View Offers</td>
+                            <td class="api-file">jiya/view_offers.php</td>
+                            <td><a href="jiya/view_offers.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>71</td>
+                            <td>View Offer Images</td>
+                            <td class="api-file">jiya/view_offers_images.php</td>
+                            <td><a href="jiya/view_offers_images.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>72</td>
+                            <td>View Recent Booking</td>
+                            <td class="api-file">jiya/view_recent_booking.php</td>
+                            <td><a href="jiya/view_recent_booking.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>73</td>
+                            <td>View Review</td>
+                            <td class="api-file">jiya/view_review.php</td>
+                            <td><a href="jiya/view_review.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>74</td>
+                            <td>View Room Categories</td>
+                            <td class="api-file">jiya/view_room_categories.php</td>
+                            <td><a href="jiya/view_room_categories.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>75</td>
+                            <td>View Room Service</td>
+                            <td class="api-file">jiya/view_room_service.php</td>
+                            <td><a href="jiya/view_room_service.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>76</td>
+                            <td>View Rooms</td>
+                            <td class="api-file">jiya/view_rooms.php</td>
+                            <td><a href="jiya/view_rooms.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>77</td>
+                            <td>View Room Images</td>
+                            <td class="api-file">jiya/view_rooms_images.php</td>
+                            <td><a href="jiya/view_rooms_images.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>78</td>
+                            <td>View Service</td>
+                            <td class="api-file">jiya/view_service.php</td>
+                            <td><a href="jiya/view_service.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>79</td>
+                            <td>View User Payments</td>
+                            <td class="api-file">jiya/view_user_payments.php</td>
+                            <td><a href="jiya/view_user_payments.php" class="api-open">Open API →</a></td>
+                        </tr>
+                        <tr>
+                            <td>80</td>
+                            <td>View User Payment</td>
+                            <td class="api-file">jiya/view_user_payment.php</td>
+                            <td><a href="jiya/view_user_payment.php" class="api-open">Open API →</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GROW
+===================================================== -->
+
+<section class="grow-section">
+
+    <div class="container">
+
+        <div class="grow-content">
+
+
+            <h2>
+                🌱 Explore. Learn. Build. Share. Grow.
+            </h2>
+
+
+            <p>
+
+                Keep learning, keep building and keep sharing.
+                Every project is an opportunity to learn something new.
+
+            </p>
+
+
+            <div class="grow-items">
+
+                <div class="grow-item">
+                    🌍 Explore
+                </div>
+
+                <div class="grow-item">
+                    📚 Learn
+                </div>
+
+                <div class="grow-item">
+                    💡 Create
+                </div>
+
+                <div class="grow-item">
+                    🛠️ Build
+                </div>
+
+                <div class="grow-item">
+                    🤝 Share
+                </div>
+
+                <div class="grow-item">
+                    🌱 Grow
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container">
+
+
+        <div class="footer-main">
+
+
+            <div>
+
+                <div class="footer-brand">
+
+                    Prakruti<span>Verse</span>
+
+                </div>
+
+
+                <div class="footer-basic">
+
+                    Explore · Learn · Build · Share · Grow
+
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-contact">
+
+
+                <!-- Replace with actual WhatsApp number -->
+
+                <a
+                    href="https://wa.me/6354647760"
+                    class="contact-item"
+                    target="_blank"
+                >
+
+                    📱 WhatsApp
+
+                </a>
+
+
+                <!-- Replace with actual email -->
+
+                <a
+                    href="mailto:topsapps91@gmail.com"
+                    class="contact-item"
+                >
+
+                    ✉️ topsapps91@gmail.com
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="copyright">
+
+            © <?php echo date("Y"); ?>
+
+            PrakrutiVerse. All rights reserved.
+
+            · Built for learning & sharing. 🚀
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
